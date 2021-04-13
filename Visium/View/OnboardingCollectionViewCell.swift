@@ -15,7 +15,6 @@ class OnboardingCollectionViewCell: UICollectionViewCell {
         self.onboardingSlide = onboardingSlide
         
         if onboardingSlide.isVideo {
-            contentView.backgroundColor = .yellow
             let playerView = VideoPlayer(frame: self.bounds)
             playerView.playVideo("video1", of: "mp4")
             self.contentView.addSubview(playerView)
@@ -23,7 +22,6 @@ class OnboardingCollectionViewCell: UICollectionViewCell {
         } else {
             let imageView = UIImageView(frame: self.bounds)
             imageView.image = UIImage(named: "VisiumLogo")
-            imageView.backgroundColor = .red
             self.contentView.addSubview(imageView)
         }
     }

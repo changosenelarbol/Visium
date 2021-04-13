@@ -21,6 +21,7 @@
 		8B7F9A3A2624195B00A34C24 /* VideoPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B7F9A392624195B00A34C24 /* VideoPlayer.swift */; };
 		8B7F9A422624196F00A34C24 /* VideoPlayer.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B7F9A412624196F00A34C24 /* VideoPlayer.xib */; };
 		8B7F9A482624965000A34C24 /* video1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 8B7F9A472624965000A34C24 /* video1.mp4 */; };
+		8B7F9A512625584C00A34C24 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B7F9A502625584C00A34C24 /* LogInViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		8B7F9A392624195B00A34C24 /* VideoPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayer.swift; sourceTree = "<group>"; };
 		8B7F9A412624196F00A34C24 /* VideoPlayer.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VideoPlayer.xib; sourceTree = "<group>"; };
 		8B7F9A472624965000A34C24 /* video1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = video1.mp4; sourceTree = "<group>"; };
+		8B7F9A502625584C00A34C24 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +175,7 @@
 			isa = PBXGroup;
 			children = (
 				8B7F9A20262402AB00A34C24 /* OnboardingViewController.swift */,
+				8B7F9A502625584C00A34C24 /* LogInViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -330,6 +333,7 @@
 				8B7F9A2F26240B0900A34C24 /* OnboardingSlide.swift in Sources */,
 				8B7F99DE2623FC7200A34C24 /* AppDelegate.swift in Sources */,
 				8B7F9A21262402AB00A34C24 /* OnboardingViewController.swift in Sources */,
+				8B7F9A512625584C00A34C24 /* LogInViewController.swift in Sources */,
 				8B7F99E02623FC7200A34C24 /* SceneDelegate.swift in Sources */,
 				8B7F9A27262405A100A34C24 /* Extensions.swift in Sources */,
 				8B7F9A3426240C0000A34C24 /* OnboardingCollectionViewCell.swift in Sources */,
