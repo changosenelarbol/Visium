@@ -13,8 +13,18 @@ class OnboardingViewController: UIViewController {
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var collectionView: UICollectionView!
     
-    var slides: [OnboardingSlide] = [OnboardingSlide(title: "1", image: "1", video: "1", isVideo: false), OnboardingSlide(title: "2", image: "2", video: "2", isVideo: true)]
-    var currentPage: Int = 0
+    var slides: [OnboardingSlide] = [OnboardingSlide(title: "1", image: "1", video: "1", isVideo: false), OnboardingSlide(title: "2", image: "2", video: "2", isVideo: true), OnboardingSlide(title: "2", image: "2", video: "2", isVideo: false)]
+    var currentPage: Int = 0 {
+        didSet {
+            pageControl.currentPage = currentPage
+            if currentPage == slides.count - 1 { // Last Page
+                self.nextButton.setTitle("Go", for: .normal)
+            } else {
+                self.nextButton.setTitle("Next", for: .normal)
+              
+            }
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,15 +34,40 @@ class OnboardingViewController: UIViewController {
         self.collectionView.register(OnboardingCollectionViewCell.self, forCellWithReuseIdentifier: OnboardingCollectionViewCell.identifier)
         let layout = UICollectionViewFlowLayout()
            layout.scrollDirection = .horizontal //.horizontal
-           layout.sectionInset = UIEdgeInsets(top: 1, left: 1, bottom: 1, right: 1)
-           layout.minimumLineSpacing = 1.0
-           layout.minimumInteritemSpacing = 1.0
+           layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+           layout.minimumLineSpacing = 0
+           layout.minimumInteritemSpacing = 0
         collectionView.setCollectionViewLayout(layout, animated: true)
+        self.pageControl.numberOfPages = self.slides.count
     }
     
     @IBAction func nextButtonAction(_ sender: Any) {
+        
+        if currentPage == slides.count - 1 {
+            //Go to init screen
+            presentLogInScreen()
+            
+        } else {
+            currentPage += 1
+            let indexPath = IndexPath(item: currentPage, section: 0)
+            collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
+
+        }
+      
     }
     
+    @IBAction func skipButtonAction(_ sender: Any) {
+        presentLogInScreen()
+    }
+    
+    func presentLogInScreen() {
+        if  let initialNavigationController = storyboard?.instantiateViewController(identifier: "InitialNavigationController") as? UINavigationController {
+            initialNavigationController.modalPresentationStyle = .fullScreen
+            initialNavigationController.modalTransitionStyle = .crossDissolve
+            self.present(initialNavigationController, animated: true, completion: nil)
+            
+        }
+    }
 }
 
 extension OnboardingViewController: UICollectionViewDelegate {

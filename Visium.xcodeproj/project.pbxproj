@@ -21,6 +21,13 @@
 		8B7F9A3A2624195B00A34C24 /* VideoPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B7F9A392624195B00A34C24 /* VideoPlayer.swift */; };
 		8B7F9A422624196F00A34C24 /* VideoPlayer.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B7F9A412624196F00A34C24 /* VideoPlayer.xib */; };
 		8B7F9A482624965000A34C24 /* video1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 8B7F9A472624965000A34C24 /* video1.mp4 */; };
+		8B7F9A512625584C00A34C24 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B7F9A502625584C00A34C24 /* LogInViewController.swift */; };
+		8B7F9A572625EECF00A34C24 /* RoundedUIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B7F9A562625EECF00A34C24 /* RoundedUIButton.swift */; };
+		8B7F9A6126268CE900A34C24 /* RoundedUITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B7F9A6026268CE900A34C24 /* RoundedUITextField.swift */; };
+		8B7F9A662626925F00A34C24 /* LogInFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B7F9A652626925F00A34C24 /* LogInFormViewController.swift */; };
+		8B7F9A6C2626B1CC00A34C24 /* CheckBoxWithTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B7F9A6B2626B1CC00A34C24 /* CheckBoxWithTitleView.swift */; };
+		8B7F9A742626B1DB00A34C24 /* CheckBoxWithTitleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B7F9A732626B1DB00A34C24 /* CheckBoxWithTitleView.xib */; };
+		8B7F9A7A2627EDB600A34C24 /* TermsAndConditionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B7F9A792627EDB600A34C24 /* TermsAndConditionsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +68,13 @@
 		8B7F9A392624195B00A34C24 /* VideoPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayer.swift; sourceTree = "<group>"; };
 		8B7F9A412624196F00A34C24 /* VideoPlayer.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VideoPlayer.xib; sourceTree = "<group>"; };
 		8B7F9A472624965000A34C24 /* video1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = video1.mp4; sourceTree = "<group>"; };
+		8B7F9A502625584C00A34C24 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		8B7F9A562625EECF00A34C24 /* RoundedUIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedUIButton.swift; sourceTree = "<group>"; };
+		8B7F9A6026268CE900A34C24 /* RoundedUITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedUITextField.swift; sourceTree = "<group>"; };
+		8B7F9A652626925F00A34C24 /* LogInFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInFormViewController.swift; sourceTree = "<group>"; };
+		8B7F9A6B2626B1CC00A34C24 /* CheckBoxWithTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBoxWithTitleView.swift; sourceTree = "<group>"; };
+		8B7F9A732626B1DB00A34C24 /* CheckBoxWithTitleView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CheckBoxWithTitleView.xib; sourceTree = "<group>"; };
+		8B7F9A792627EDB600A34C24 /* TermsAndConditionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsAndConditionsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +162,8 @@
 			isa = PBXGroup;
 			children = (
 				8B7F9A2E26240B0900A34C24 /* OnboardingSlide.swift */,
+				8B7F9A562625EECF00A34C24 /* RoundedUIButton.swift */,
+				8B7F9A6026268CE900A34C24 /* RoundedUITextField.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -155,6 +171,7 @@
 		8B7F9A172623FC8500A34C24 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				8B7F9A6A2626B1A200A34C24 /* CheckBoxWithTitle */,
 				8B7F9A382624192100A34C24 /* VideoPlayer */,
 				8B7F9A3326240C0000A34C24 /* OnboardingCollectionViewCell.swift */,
 			);
@@ -173,6 +190,9 @@
 			isa = PBXGroup;
 			children = (
 				8B7F9A20262402AB00A34C24 /* OnboardingViewController.swift */,
+				8B7F9A502625584C00A34C24 /* LogInViewController.swift */,
+				8B7F9A652626925F00A34C24 /* LogInFormViewController.swift */,
+				8B7F9A792627EDB600A34C24 /* TermsAndConditionsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -192,6 +212,15 @@
 				8B7F9A412624196F00A34C24 /* VideoPlayer.xib */,
 			);
 			path = VideoPlayer;
+			sourceTree = "<group>";
+		};
+		8B7F9A6A2626B1A200A34C24 /* CheckBoxWithTitle */ = {
+			isa = PBXGroup;
+			children = (
+				8B7F9A6B2626B1CC00A34C24 /* CheckBoxWithTitleView.swift */,
+				8B7F9A732626B1DB00A34C24 /* CheckBoxWithTitleView.xib */,
+			);
+			path = CheckBoxWithTitle;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -299,6 +328,7 @@
 			files = (
 				8B7F9A422624196F00A34C24 /* VideoPlayer.xib in Resources */,
 				8B7F99EA2623FC7300A34C24 /* LaunchScreen.storyboard in Resources */,
+				8B7F9A742626B1DB00A34C24 /* CheckBoxWithTitleView.xib in Resources */,
 				8B7F99E72623FC7300A34C24 /* Assets.xcassets in Resources */,
 				8B7F9A482624965000A34C24 /* video1.mp4 in Resources */,
 				8B7F99E52623FC7200A34C24 /* Main.storyboard in Resources */,
@@ -327,12 +357,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				8B7F9A3A2624195B00A34C24 /* VideoPlayer.swift in Sources */,
+				8B7F9A6126268CE900A34C24 /* RoundedUITextField.swift in Sources */,
 				8B7F9A2F26240B0900A34C24 /* OnboardingSlide.swift in Sources */,
 				8B7F99DE2623FC7200A34C24 /* AppDelegate.swift in Sources */,
+				8B7F9A662626925F00A34C24 /* LogInFormViewController.swift in Sources */,
 				8B7F9A21262402AB00A34C24 /* OnboardingViewController.swift in Sources */,
+				8B7F9A512625584C00A34C24 /* LogInViewController.swift in Sources */,
+				8B7F9A7A2627EDB600A34C24 /* TermsAndConditionsViewController.swift in Sources */,
 				8B7F99E02623FC7200A34C24 /* SceneDelegate.swift in Sources */,
 				8B7F9A27262405A100A34C24 /* Extensions.swift in Sources */,
 				8B7F9A3426240C0000A34C24 /* OnboardingCollectionViewCell.swift in Sources */,
+				8B7F9A6C2626B1CC00A34C24 /* CheckBoxWithTitleView.swift in Sources */,
+				8B7F9A572625EECF00A34C24 /* RoundedUIButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
