@@ -1,19 +1,23 @@
 //
-//  LogInViewController.swift
+//  LogInFormViewController.swift
 //  Visium
 //
-//  Created by developer on 12/04/21.
+//  Created by developer on 13/04/21.
 //
 
 import UIKit
 
-class LogInViewController: UIViewController {
-    
-    @IBOutlet weak var logOnButton: UIButton!
+class LogInFormViewController: UIViewController {
 
+    @IBOutlet weak var termsAndServiceButton: RoundedUIButton!
+    @IBOutlet weak var checkView: CheckBoxWithTitleView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        self.hideKeyboardWhenTappedAround()
+        self.termsAndServiceButton.setTitle(title: "By logging in, you're accepting these \n Terms and Service")
+        self.checkView.setTitle(title: "Remember user ID")
         // Do any additional setup after loading the view.
     }
     
@@ -27,14 +31,5 @@ class LogInViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-    
-    @IBAction func logOnButtonAction(_ sender: Any) {
-        if  let logInFormViewController = storyboard?.instantiateViewController(identifier: "LogInFormViewController") as? LogInFormViewController {
-            
-            self.navigationController?.pushViewController(logInFormViewController, animated: true)
-            
-    
-      
-    }
-    }
+
 }

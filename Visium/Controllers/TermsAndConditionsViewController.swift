@@ -1,15 +1,13 @@
 //
-//  LogInViewController.swift
+//  TermsAndConditionsViewController.swift
 //  Visium
 //
-//  Created by developer on 12/04/21.
+//  Created by developer on 14/04/21.
 //
 
 import UIKit
 
-class LogInViewController: UIViewController {
-    
-    @IBOutlet weak var logOnButton: UIButton!
+class TermsAndConditionsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,14 +25,5 @@ class LogInViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-    
-    @IBAction func logOnButtonAction(_ sender: Any) {
-        if  let logInFormViewController = storyboard?.instantiateViewController(identifier: "LogInFormViewController") as? LogInFormViewController {
-            
-            self.navigationController?.pushViewController(logInFormViewController, animated: true)
-            
-    
-      
-    }
-    }
+
 }
