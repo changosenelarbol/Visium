@@ -29,9 +29,9 @@ class LogInViewController: UIViewController {
     */
     
     @IBAction func logOnButtonAction(_ sender: Any) {
-        if  let logInFormViewController = storyboard?.instantiateViewController(identifier: "LogInFormViewController") as? LogInFormViewController {
+        if  let resetPasswordViewController = storyboard?.instantiateViewController(identifier: "ResetPasswordViewController") as? ResetPasswordViewController {
             
-            self.navigationController?.pushViewController(logInFormViewController, animated: true)
+            self.navigationController?.pushViewController(resetPasswordViewController, animated: true)
             
     
       

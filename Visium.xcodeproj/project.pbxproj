@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8B6114FD2629609900B833C6 /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6114FC2629609900B833C6 /* ResetPasswordViewController.swift */; };
 		8B7F99DE2623FC7200A34C24 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B7F99DD2623FC7200A34C24 /* AppDelegate.swift */; };
 		8B7F99E02623FC7200A34C24 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B7F99DF2623FC7200A34C24 /* SceneDelegate.swift */; };
 		8B7F99E52623FC7200A34C24 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B7F99E32623FC7200A34C24 /* Main.storyboard */; };
@@ -48,6 +49,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8B6114FC2629609900B833C6 /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
 		8B7F99DA2623FC7200A34C24 /* Visium.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Visium.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B7F99DD2623FC7200A34C24 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8B7F99DF2623FC7200A34C24 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -193,6 +195,7 @@
 				8B7F9A502625584C00A34C24 /* LogInViewController.swift */,
 				8B7F9A652626925F00A34C24 /* LogInFormViewController.swift */,
 				8B7F9A792627EDB600A34C24 /* TermsAndConditionsViewController.swift */,
+				8B6114FC2629609900B833C6 /* ResetPasswordViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -369,6 +372,7 @@
 				8B7F9A3426240C0000A34C24 /* OnboardingCollectionViewCell.swift in Sources */,
 				8B7F9A6C2626B1CC00A34C24 /* CheckBoxWithTitleView.swift in Sources */,
 				8B7F9A572625EECF00A34C24 /* RoundedUIButton.swift in Sources */,
+				8B6114FD2629609900B833C6 /* ResetPasswordViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
