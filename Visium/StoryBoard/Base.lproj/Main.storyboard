@@ -130,6 +130,9 @@
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="filled" value="YES"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="resetPasswordAction:" destination="KYv-8M-5UA" eventType="touchUpInside" id="Hmv-Ug-wVC"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CZg-ai-r3R">
                                 <rect key="frame" x="50" y="239" width="314" height="40"/>
@@ -158,10 +161,10 @@
             </objects>
             <point key="canvasLocation" x="33" y="826"/>
         </scene>
-        <!--View Controller-->
+        <!--Password Reset Code View Controller-->
         <scene sceneID="qNR-YT-RVd">
             <objects>
-                <viewController id="3sC-kK-tEa" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PasswordResetCodeViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="3sC-kK-tEa" customClass="PasswordResetCodeViewController" customModule="Visium" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Giz-V6-Mci">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -183,6 +186,9 @@
                                     <constraint firstAttribute="height" constant="40" id="VsD-a5-0AC"/>
                                 </constraints>
                                 <state key="normal" title="Cancel"/>
+                                <connections>
+                                    <action selector="cancelAction:" destination="3sC-kK-tEa" eventType="touchUpInside" id="23Y-oE-iaE"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="03K-XO-2D3"/>
@@ -201,10 +207,10 @@
             </objects>
             <point key="canvasLocation" x="706" y="826"/>
         </scene>
-        <!--View Controller-->
+        <!--Password Reset Form View Controller-->
         <scene sceneID="zI1-8E-8ZQ">
             <objects>
-                <viewController id="FJw-wW-ch2" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PasswordResetFormViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="FJw-wW-ch2" customClass="PasswordResetFormViewController" customModule="Visium" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="J0I-MB-oI7">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -274,10 +280,10 @@
             </objects>
             <point key="canvasLocation" x="1368" y="826"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Create Account Table View Controller-->
         <scene sceneID="Ul0-sh-P8t">
             <objects>
-                <tableViewController id="Adw-cj-l6X" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="CreateAccountTableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Adw-cj-l6X" customClass="CreateAccountTableViewController" customModule="Visium" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="UG7-KM-6RX">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -524,6 +530,9 @@
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="filled" value="NO"/>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="createAccountAction:" destination="MgX-bW-Zs8" eventType="touchUpInside" id="2zi-Kw-PHp"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -595,6 +604,9 @@
                                     <constraint firstAttribute="height" constant="30" id="QhH-72-ZWc"/>
                                 </constraints>
                                 <state key="normal" title="Privacy Policy"/>
+                                <connections>
+                                    <action selector="showPrivacyAndPolicyAction:" destination="JQj-bq-KgP" eventType="touchUpInside" id="Xs1-P7-rpq"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8pM-op-hsK" customClass="CheckBoxWithTitleView" customModule="Visium" customModuleProvider="target">
                                 <rect key="frame" x="50" y="224" width="314" height="40"/>
@@ -609,6 +621,9 @@
                                     <constraint firstAttribute="height" constant="30" id="cZj-ir-iF3"/>
                                 </constraints>
                                 <state key="normal" title="Forgot Password"/>
+                                <connections>
+                                    <action selector="forgotPasswordAction:" destination="JQj-bq-KgP" eventType="touchUpInside" id="vBM-cO-Qp0"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0sg-gH-JVv" customClass="RoundedUIButton" customModule="Visium" customModuleProvider="target">
                                 <rect key="frame" x="50" y="299" width="314" height="50"/>

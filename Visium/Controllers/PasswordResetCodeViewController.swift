@@ -1,28 +1,27 @@
 //
-//  ResetPasswordViewController.swift
+//  PasswordResetCodeViewController.swift
 //  Visium
 //
-//  Created by developer on 16/04/21.
+//  Created by developer on 23/04/21.
 //
 
 import UIKit
 
-class ResetPasswordViewController: UIViewController {
+class PasswordResetCodeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        self.hideKeyboardWhenTappedAround()
     }
     
-    @IBAction func resetPasswordAction(_ sender: Any) {
+
+    @IBAction func cancelAction(_ sender: Any) {
         
-        if  let passwordResetCodeViewController = storyboard?.instantiateViewController(identifier: "PasswordResetCodeViewController") as? PasswordResetCodeViewController {
-            self.navigationController?.pushViewController(passwordResetCodeViewController, animated: true)
+        if  let passwordResetFormViewController = storyboard?.instantiateViewController(identifier: "PasswordResetFormViewController") as? PasswordResetFormViewController {
+            self.navigationController?.pushViewController(passwordResetFormViewController, animated: true)
         }
     }
-    
     /*
     // MARK: - Navigation
 
