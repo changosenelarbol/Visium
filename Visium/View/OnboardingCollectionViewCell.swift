@@ -24,6 +24,8 @@ class OnboardingCollectionViewCell: UICollectionViewCell {
             imageView.image = UIImage(named: "VisiumLogo")
             self.contentView.addSubview(imageView)
         }
+        
+        //
     }
     
    
