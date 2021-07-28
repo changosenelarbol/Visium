@@ -11,11 +11,14 @@ class TermsAndConditionsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.title = "Links To Docs"
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func EULAAction(_ sender: Any) {
+        Alert.shared.showAlert(title: "Succes!!", alertType: .warning)
+    }
+    
     /*
     // MARK: - Navigation
 

@@ -14,6 +14,7 @@ class ResetPasswordViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         self.hideKeyboardWhenTappedAround()
+        self.title = "Password Reset"
     }
     
     @IBAction func resetPasswordAction(_ sender: Any) {

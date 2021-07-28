@@ -1,0 +1,43 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.3.2 (swiftlang-1200.0.45 clang-1200.0.32.28)
+// swift-module-flags: -target x86_64-apple-ios9.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name Bellus3D
+@_exported import Bellus3D
+import Foundation
+import MobileCoreServices
+import Swift
+@_inheritsConvenienceInitializers @objc public class EndpointSettings : ObjectiveC.NSObject {
+  @objc public static var ProductionEndpointURL: Foundation.URL {
+    @objc get
+  }
+  @objc public static var DevelopmentEndpointURL: Foundation.URL {
+    @objc get
+  }
+  @objc public static var EndpointURL: Foundation.URL {
+    @objc get
+  }
+  @objc deinit
+  @objc override dynamic public init()
+}
+@_inheritsConvenienceInitializers @objc public class Authenticator : ObjectiveC.NSObject {
+  @discardableResult
+  @objc(requestAuthenticationWithCredentials:completionHandler:) public func requestAuthentication(credentials: Bellus3D.B3DCredentials, completion: @escaping ((Bellus3D.B3DAccessToken?, Swift.Error?) -> Swift.Void)) -> Foundation.URLSessionDataTask?
+  @discardableResult
+  @objc(requestClientInfoWithAccessToken:completionHandler:) public func requestClientInfo(accessToken: Bellus3D.B3DAccessToken, completion: @escaping ((Bellus3D.B3DClient?, Swift.Error?) -> Swift.Void)) -> Foundation.URLSessionDataTask?
+  @objc deinit
+  @objc override dynamic public init()
+}
+@_inheritsConvenienceInitializers @objc public class ModelAccessProvider : ObjectiveC.NSObject {
+  @discardableResult
+  @objc(requestActivationBySharingModelAtURL:previewURL:modelInfo:accessToken:completionHandler:) public func requestActivation(bySharing modelURL: Foundation.URL, previewURL: Foundation.URL, modelInfo: Bellus3D.B3DModelInfo, accessToken: Bellus3D.B3DAccessToken, completion: @escaping (Swift.String?, Swift.Error?) -> Swift.Void) -> Foundation.URLSessionDataTask?
+  @discardableResult
+  @objc(requestAccessByTokensBatchWithAccessToken:completionHandler:) public func requestAccess(byTokensBatch accessToken: Bellus3D.B3DAccessToken, completion: @escaping ((Swift.Set<Swift.String>?, Swift.Error?) -> Swift.Void)) -> Foundation.URLSessionDataTask?
+  @objc public static func isIPadDevice() -> Swift.Bool
+  @objc public static func isIPhoneDevice() -> Swift.Bool
+  @objc deinit
+  @objc override dynamic public init()
+}
+extension B3DHeadMesh {
+  public static var numberOfCachedTokens: Swift.UInt? {
+    get
+  }
+}

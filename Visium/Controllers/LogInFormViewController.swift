@@ -11,14 +11,15 @@ class LogInFormViewController: UIViewController {
     
     @IBOutlet weak var termsAndServiceButton: RoundedUIButton!
     @IBOutlet weak var checkView: CheckBoxWithTitleView!
+    @IBOutlet weak var emailTextField: RoundedUITextField!
+    @IBOutlet weak var passwordTextField: RoundedUITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.title = "Log On"
         self.hideKeyboardWhenTappedAround()
         self.termsAndServiceButton.setTitle(title: "By logging in, you're accepting these \n Terms and Service")
         self.checkView.setTitle(title: "Remember user ID")
-        // Do any additional setup after loading the view.
     }
     
     @IBAction func showPrivacyAndPolicyAction(_ sender: Any) {
@@ -32,14 +33,25 @@ class LogInFormViewController: UIViewController {
             self.navigationController?.pushViewController(resetPasswordViewController, animated: true)
         }
     }
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
+    
+    @IBAction func logOnAction(_ sender: Any) {
+        guard let userInfo = getUserAndPassword() else { return }
+        ApiManager.logIn(user: userInfo.email, password: userInfo.password) { (token) in
+            print(token)
+            SessionManager.shared.token = token
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let scannViewController = storyboard.instantiateViewController(identifier: "ScanViewController")
+            scannViewController.modalPresentationStyle = .fullScreen
+            self.navigationController?.pushViewController(scannViewController, animated: true)
+        } failure: {
+            print("failure")
+        }
+    }
+    
+    func getUserAndPassword() -> (email: String, password: String)? {
+        guard let email = self.emailTextField.text else { return nil }
+        guard let password = self.passwordTextField.text else { return nil }
+        return (email, password)
+    }
     
 }

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Bellus3D
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -14,6 +15,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        B3DLogger.shared.writer = self
+
         return true
     }
 
@@ -34,3 +37,46 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+extension AppDelegate: B3DLogWriting {
+  
+  func writeLog(with logger: B3DLogger,
+                message: String,
+                level: B3DLoggerLogLevel,
+                functionName: String,
+                functionType: B3DLoggerFunctionType,
+                objectDescription: String?,
+                fileName: String,
+                lineNumber: Int) {
+
+    var calledName: String
+    switch functionType {
+    case .freeFunction:
+      calledName = "'\(functionName)'"
+    case .objectMethod:
+      calledName = "'-\(functionName)'"
+    case .classMethod:
+      calledName = "'+\(functionName)'"
+    default:
+      calledName = "<unknown function>"
+    }
+    
+    if let object = objectDescription {
+      calledName = "\(object).\(calledName)"
+    }
+    let logLevel: String
+    switch level {
+    case .debug:
+      logLevel = "[DEBUG]"
+    case .error:
+      logLevel = "[ERROR]"
+    case .warning:
+      logLevel = "[WARNING]"
+    default:
+      logLevel = "[UNKNOWN]"
+    }
+    
+    print("[SDK] \(logLevel) \(calledName) \(fileName):\(lineNumber): \(message)")
+    
+  }
+  
+}

@@ -1,0 +1,6 @@
+framework module Bellus3D {
+  umbrella header "Bellus3D.h"
+
+  export *
+  module * { export * }
+}

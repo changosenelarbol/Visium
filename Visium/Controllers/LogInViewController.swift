@@ -13,25 +13,24 @@ class LogInViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
+        self.title = "Log On"
     }
     
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
+    @IBAction func continueAsGuestAction(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let scannViewController = storyboard.instantiateViewController(identifier: "ScanViewController")
+        scannViewController.modalPresentationStyle = .fullScreen
+        self.navigationController?.pushViewController(scannViewController, animated: true)
+    }
     
     @IBAction func logOnButtonAction(_ sender: Any) {
         if  let logInFormViewController = storyboard?.instantiateViewController(identifier: "LogInFormViewController") as? LogInFormViewController {
             
             self.navigationController?.pushViewController(logInFormViewController, animated: true)
+
+         
+           
+
         }
     }
     @IBAction func createAccountAction(_ sender: Any) {

@@ -28,7 +28,6 @@ class VideoPlayer: UIView {
             viewFromXIB.frame = self.bounds
             self.addSubview(viewFromXIB)
             addPlayerToView(self.viewPlayer)
-
         }
     }
    
@@ -36,7 +35,7 @@ class VideoPlayer: UIView {
         self.player = AVPlayer()
         let playerLayer = AVPlayerLayer(player: self.player)
         playerLayer.frame = self.bounds
-        playerLayer.videoGravity = .resizeAspectFill
+        playerLayer.videoGravity = .resizeAspect
         view.layer.addSublayer(playerLayer)
         NotificationCenter.default.addObserver(self, selector: #selector(playerEndPlay), name: .AVPlayerItemDidPlayToEndTime, object: nil)
     }

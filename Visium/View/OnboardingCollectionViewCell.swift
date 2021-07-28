@@ -16,7 +16,7 @@ class OnboardingCollectionViewCell: UICollectionViewCell {
         
         if onboardingSlide.isVideo {
             let playerView = VideoPlayer(frame: self.bounds)
-            playerView.playVideo("video1", of: "mp4")
+            playerView.playVideo("video2", of: "mp4")
             self.contentView.addSubview(playerView)
             
         } else {

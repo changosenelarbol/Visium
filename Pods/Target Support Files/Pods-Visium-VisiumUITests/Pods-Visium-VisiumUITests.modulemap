@@ -1,0 +1,6 @@
+framework module Pods_Visium_VisiumUITests {
+  umbrella header "Pods-Visium-VisiumUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
