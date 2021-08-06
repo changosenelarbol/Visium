@@ -14,7 +14,8 @@ class ViewerViewController: UIViewController {
   var headNode: SCNNode?
   var texture: CGImage?
   var light: SCNLight?
-  
+  var urlOfFilesScanned: URL?
+    
   private var lightIntensity: CGFloat = 1500 {
     didSet {
       lightIntensityLabel?.text = "\(Int(lightIntensity))"
@@ -33,7 +34,21 @@ class ViewerViewController: UIViewController {
     super.viewDidLoad()
     setupSceneView()
   }
-  
+    
+    
+    @IBAction func shareButtonTapped(_ sender: Any) {
+        
+        guard let urlOfFiles = self.urlOfFilesScanned else { return }
+        //   Make the activityViewContoller which shows the share-view
+        let activityViewController = UIActivityViewController(activityItems: [urlOfFiles], applicationActivities: nil)
+        activityViewController.completionWithItemsHandler = { (type,completed,items,error) in
+            
+        }
+        // Show the share-view
+        self.present(activityViewController, animated: true, completion: {
+        })
+    }
+    
   @IBAction func closeButtonTapped(_ sender: UIButton) {
     dismiss(animated: true)
   }

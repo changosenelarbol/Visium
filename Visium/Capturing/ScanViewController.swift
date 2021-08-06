@@ -12,7 +12,6 @@ import UIKit
 import ARKit
 import Bellus3D
 
-
 class ScanViewController: UIViewController {
 
   @IBOutlet private var trackButton: UIButton?
@@ -29,7 +28,9 @@ class ScanViewController: UIViewController {
   private var cancelledByUser = false
   @available(iOS 11.1, *)
   private lazy var headScanner = HeadScanner(camera: B3DCamera(videoOrientation:  .portrait), delegate: self)
-
+    private var urlOfFilesScanned: URL?
+    
+    
   @IBAction private func trackButtonPressed(_ sender: UIButton) {
     startTracking()
   }
@@ -43,10 +44,20 @@ class ScanViewController: UIViewController {
     instructionLabel?.text = "Scan cancelled"
   }
 
-  override func viewDidLoad() {
+    @IBAction func showFilesAction(_ sender: Any) {
+        
+        if  let filesViewController = storyboard?.instantiateViewController(identifier: "FilesViewController") as? FilesViewController {
+            
+            self.navigationController?.pushViewController(filesViewController, animated: true)
+           // self.present(filesViewController, animated: true, completion: nil)
+            
+        }
+    }
+    override func viewDidLoad() {
     super.viewDidLoad()
     if #available(iOS 11.1, *) {
      //   self.headScanner = HeadScanner(camera: B3DCamera(videoOrientation:  .portrait), delegate: self)
+        self.scanButton?.layer.cornerRadius = (self.scanButton?.bounds.height)! / 2
       previewView?.autoresizingLayer = headScanner.previewLayer
     } else {
       instructionLabel?.text = "Scanning is available starting from iOS 11.1"
@@ -54,10 +65,16 @@ class ScanViewController: UIViewController {
       scanButton?.isEnabled = false
       cancelButton?.isEnabled = false
       exportSwitch?.isEnabled = false
+
     }
     instructionLabel?.textAlignment = .center
-    self.navigationController?.navigationBar.isHidden = true
+    exportSwitch?.isOn = false
+
   }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.navigationBar.isHidden = true
+    }
     
     override func viewWillDisappear(_ animated: Bool) {
         self.navigationController?.navigationBar.isHidden = false
@@ -68,6 +85,7 @@ class ScanViewController: UIViewController {
       if segue.identifier == Self.openViewerSegueID, let viewerViewController = segue.destination as? ViewerViewController {
         viewerViewController.headNode = headNode
         viewerViewController.texture = texture
+        viewerViewController.urlOfFilesScanned = self.urlOfFilesScanned
       }
     }
   }
@@ -103,6 +121,12 @@ class ScanViewController: UIViewController {
   
   @available(iOS 11.1, *)
   private func renderScannedHeadMesh(headScanner: HeadScanner) {
+   
+    if !(self.exportSwitch?.isOn ?? false) {
+        self.showErrorAlert(message: "Export switch is off, you wont be able to see the render")
+        return
+    }
+    
     guard let headMesh = headScanner.b3dHeadMesh else {
       print("Cannot get HeadMesh object from HeadScanner")
       return
@@ -112,6 +136,8 @@ class ScanViewController: UIViewController {
     // It's needed for exporting scanned mesh as file and to get SceneKit node to render it
 		let modelInfo = B3DModelInfo(modelName: "VISIUM-BETA-TEST", userInfo: B3DUserInfo(email: "danderson@cloudmediaworks.com", fullName: "VISIUM-BETA-TEST", sex: B3DUserInfo.Sex.male, location: "Los Gatos CA", age: 64))
     print("Number of tokens currently stored on device: \(String(describing: B3DHeadMesh.numberOfCachedTokens))")
+    
+   
     headMesh.requestActivationOfPremiumFeatures(with: modelInfo, activationMethod: .byToken) { [weak self] exporter, error in
       guard let self = self else {
         print("\(Self.self) was deallocated before activating premium features")
@@ -124,6 +150,7 @@ class ScanViewController: UIViewController {
         self.showErrorAlert(message: errorMessage)
         return
       }
+       
       
       guard let directoryURL = headScanner.getDirectory(named: "Output-files") else {
         let errorMessage = "Cannot get scanner directory"
@@ -131,8 +158,10 @@ class ScanViewController: UIViewController {
         self.showErrorAlert(message: errorMessage)
         return
       }
-      
-      // Exporting output 3D file and texture
+        
+        
+      print("❤️directoryURL: \(directoryURL)")
+     //  Exporting output 3D file and texture
         guard let urlOfFiles = HeadMeshDataExporter.exportFiles(exporter: exporter, toDirectoryAt: directoryURL) else {
             let errorMessage = "Cannot get files directory"
             print(errorMessage)
@@ -140,29 +169,45 @@ class ScanViewController: UIViewController {
             return
         }
         
-        // Make the activityViewContoller which shows the share-view
-        let activityViewController = UIActivityViewController(activityItems: [urlOfFiles], applicationActivities: nil)
-        activityViewController.completionWithItemsHandler = { (type,completed,items,error) in
-//            print("completed. type=\(type) completed=\(completed) items=\(items) error=\(error)")
-            self.performSegue(withIdentifier: Self.openViewerSegueID, sender: nil)
+        print("❤️urlOfFiles: \(urlOfFiles)")
 
-        }
-        // Show the share-view
-        self.present(activityViewController, animated: true, completion: {
-        })
+        self.urlOfFilesScanned = urlOfFiles
+        
+           
+     //   if let urlOfFiles = URL(string: "file:///var/mobile/Containers/Data/Application/38E9D691-4638-4747-9E83-65D9226B7672/Documents/Output-files/1628139909.7949982/") {
 
+        FilesManager.lastFileURL = urlOfFiles
+        print("❤️ \(FilesManager.lastFileURL)")
+        FilesManager.filesUrls.append(urlOfFiles)
+        print("❤️ \(FilesManager.filesUrls)")
+        
+        
+//        if (self.exportSwitch?.isOn ?? false) {
+//
+//    //     Make the activityViewContoller which shows the share-view
+//        let activityViewController = UIActivityViewController(activityItems: [urlOfFiles], applicationActivities: nil)
+//        activityViewController.completionWithItemsHandler = { (type,completed,items,error) in
+//            self.performSegue(withIdentifier: Self.openViewerSegueID, sender: nil)
+//
+//        }
+//        // Show the share-view
+//        self.present(activityViewController, animated: true, completion: {
+//        })
+//
+//        }
         
         // Createing objects from scanned HeadMesh to render them in Viewer
       let headMeshRenderingData = HeadMeshDataExporter.makeFaceNode(from: headMesh, exporter: exporter)
-      
       // Storing objects to pass them to Viewer
       self.headNode = headMeshRenderingData?.node
       self.texture = headMeshRenderingData?.texture
-      
+
       // Since we don't need HeadMesh object anymore we may clear memory it uses
       headMesh.clear()
-      
+
       // Showing Viewer
+        self.performSegue(withIdentifier: Self.openViewerSegueID, sender: nil)
+
     }
   }
   

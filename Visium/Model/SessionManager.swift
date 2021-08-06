@@ -9,6 +9,8 @@ import UIKit
 
 struct SessionManagerKeys {
     static let token = "token"
+    static let urlToUpload = "urlToUpload"
+
 }
 
 class SessionManager: NSObject {
@@ -22,6 +24,15 @@ class SessionManager: NSObject {
         }
         set {
             UserDefaults.standard.set(newValue, forKey: SessionManagerKeys.token)
+        }
+    }
+    
+    var urlToUpload : String? {
+        get {
+            return  UserDefaults.standard.string(forKey: SessionManagerKeys.urlToUpload)
+        }
+        set {
+            UserDefaults.standard.set(newValue, forKey: SessionManagerKeys.urlToUpload)
         }
     }
 

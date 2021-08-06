@@ -64,7 +64,10 @@ class CreateAccountTableViewController: UITableViewController {
         let userInfo = self.getUserData()
         print(userInfo)
         ApiManager.register(email: userInfo.email, password: userInfo.password, firstName: userInfo.firstName, lastName: userInfo.lastName) { (string) in
-            print("succes registered")
+            Alert.shared.showAlert(title: "Succes!!", alertType: .warning)
+            Alert.shared.didPressOk = {
+                self.navigationController?.popViewController(animated: true)
+            }
         } failure: {
             
         }

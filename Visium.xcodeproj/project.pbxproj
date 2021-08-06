@@ -11,9 +11,18 @@
 		8B64744E26B109E400466BEC /* video2.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 8B64744D26B109E400466BEC /* video2.mp4 */; };
 		8B64745526B1286500466BEC /* Alert.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B64745426B1286500466BEC /* Alert.xib */; };
 		8B64745926B1297600466BEC /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B64745826B1297600466BEC /* Alert.swift */; };
+		8B64749426B2766B00466BEC /* HintProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B64748F26B2766B00466BEC /* HintProvider.swift */; };
+		8B64749526B2766B00466BEC /* Hint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B64749026B2766B00466BEC /* Hint.swift */; };
+		8B64749626B2766B00466BEC /* ScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B64749126B2766B00466BEC /* ScanViewController.swift */; };
+		8B64749726B2766B00466BEC /* HeadScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B64749226B2766B00466BEC /* HeadScanner.swift */; };
+		8B64749826B2766B00466BEC /* HeadMeshDataExporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B64749326B2766B00466BEC /* HeadMeshDataExporter.swift */; };
+		8B64749F26B2768600466BEC /* ViewerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B64749D26B2768600466BEC /* ViewerViewController.swift */; };
+		8B6474A026B2768600466BEC /* AutoresizingLayeredView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B64749E26B2768600466BEC /* AutoresizingLayeredView.swift */; };
 		8B68CACE263398360041F839 /* CreateAccountTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B68CACD263398360041F839 /* CreateAccountTableViewController.swift */; };
 		8B68CAD326339A150041F839 /* PasswordResetCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B68CAD226339A150041F839 /* PasswordResetCodeViewController.swift */; };
 		8B68CAD826339A930041F839 /* PasswordResetFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B68CAD726339A930041F839 /* PasswordResetFormViewController.swift */; };
+		8B6D373E26B7A275004D4273 /* visiumscanAWS.zip in Resources */ = {isa = PBXBuildFile; fileRef = 8B6D373D26B7A275004D4273 /* visiumscanAWS.zip */; };
+		8B6D374526B89139004D4273 /* statusCircle.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B6D374426B89139004D4273 /* statusCircle.png */; };
 		8B7F99DE2623FC7200A34C24 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B7F99DD2623FC7200A34C24 /* AppDelegate.swift */; };
 		8B7F99E02623FC7200A34C24 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B7F99DF2623FC7200A34C24 /* SceneDelegate.swift */; };
 		8B7F99E52623FC7200A34C24 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B7F99E32623FC7200A34C24 /* Main.storyboard */; };
@@ -34,13 +43,6 @@
 		8B7F9A6C2626B1CC00A34C24 /* CheckBoxWithTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B7F9A6B2626B1CC00A34C24 /* CheckBoxWithTitleView.swift */; };
 		8B7F9A742626B1DB00A34C24 /* CheckBoxWithTitleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B7F9A732626B1DB00A34C24 /* CheckBoxWithTitleView.xib */; };
 		8B7F9A7A2627EDB600A34C24 /* TermsAndConditionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B7F9A792627EDB600A34C24 /* TermsAndConditionsViewController.swift */; };
-		8BDE3EE426ABCFA300543EA5 /* HintProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BDE3EDF26ABCFA300543EA5 /* HintProvider.swift */; };
-		8BDE3EE526ABCFA300543EA5 /* Hint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BDE3EE026ABCFA300543EA5 /* Hint.swift */; };
-		8BDE3EE626ABCFA300543EA5 /* ScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BDE3EE126ABCFA300543EA5 /* ScanViewController.swift */; };
-		8BDE3EE726ABCFA300543EA5 /* HeadScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BDE3EE226ABCFA300543EA5 /* HeadScanner.swift */; };
-		8BDE3EE826ABCFA300543EA5 /* HeadMeshDataExporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BDE3EE326ABCFA300543EA5 /* HeadMeshDataExporter.swift */; };
-		8BDE3EF826ABD1C900543EA5 /* AutoresizingLayeredView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BDE3EF626ABD1C900543EA5 /* AutoresizingLayeredView.swift */; };
-		8BDE3EF926ABD1C900543EA5 /* ViewerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BDE3EF726ABD1C900543EA5 /* ViewerViewController.swift */; };
 		8BDE401626ABF2E300543EA5 /* Bellus3D.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BDE401426ABF2BC00543EA5 /* Bellus3D.framework */; };
 		8BDE401726ABF2E300543EA5 /* Bellus3D.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8BDE401426ABF2BC00543EA5 /* Bellus3D.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8BDEB74D267711B400883A12 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BDEB74C267711B400883A12 /* APIManager.swift */; };
@@ -49,6 +51,8 @@
 		8BED3D5626852EED00D51139 /* video1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 8BED3D5526852EED00D51139 /* video1.mp4 */; };
 		8BED3D60268846B800D51139 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BED3D5F268846B800D51139 /* SessionManager.swift */; };
 		8BED3D6726884EDB00D51139 /* LogInFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BED3D6626884EDB00D51139 /* LogInFormViewModel.swift */; };
+		8BFEA39C26BB907600585E36 /* FilesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFEA39B26BB907600585E36 /* FilesViewController.swift */; };
+		8BFEA3A026BB909D00585E36 /* FilesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFEA39F26BB909D00585E36 /* FilesManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,9 +93,18 @@
 		8B64744D26B109E400466BEC /* video2.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = video2.mp4; sourceTree = "<group>"; };
 		8B64745426B1286500466BEC /* Alert.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Alert.xib; sourceTree = "<group>"; };
 		8B64745826B1297600466BEC /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		8B64748F26B2766B00466BEC /* HintProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HintProvider.swift; sourceTree = "<group>"; };
+		8B64749026B2766B00466BEC /* Hint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hint.swift; sourceTree = "<group>"; };
+		8B64749126B2766B00466BEC /* ScanViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanViewController.swift; sourceTree = "<group>"; };
+		8B64749226B2766B00466BEC /* HeadScanner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeadScanner.swift; sourceTree = "<group>"; };
+		8B64749326B2766B00466BEC /* HeadMeshDataExporter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeadMeshDataExporter.swift; sourceTree = "<group>"; };
+		8B64749D26B2768600466BEC /* ViewerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewerViewController.swift; sourceTree = "<group>"; };
+		8B64749E26B2768600466BEC /* AutoresizingLayeredView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoresizingLayeredView.swift; sourceTree = "<group>"; };
 		8B68CACD263398360041F839 /* CreateAccountTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountTableViewController.swift; sourceTree = "<group>"; };
 		8B68CAD226339A150041F839 /* PasswordResetCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordResetCodeViewController.swift; sourceTree = "<group>"; };
 		8B68CAD726339A930041F839 /* PasswordResetFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordResetFormViewController.swift; sourceTree = "<group>"; };
+		8B6D373D26B7A275004D4273 /* visiumscanAWS.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = visiumscanAWS.zip; sourceTree = "<group>"; };
+		8B6D374426B89139004D4273 /* statusCircle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = statusCircle.png; sourceTree = "<group>"; };
 		8B7F99DA2623FC7200A34C24 /* Visium.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Visium.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B7F99DD2623FC7200A34C24 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8B7F99DF2623FC7200A34C24 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -118,13 +131,6 @@
 		8B7F9A6B2626B1CC00A34C24 /* CheckBoxWithTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBoxWithTitleView.swift; sourceTree = "<group>"; };
 		8B7F9A732626B1DB00A34C24 /* CheckBoxWithTitleView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CheckBoxWithTitleView.xib; sourceTree = "<group>"; };
 		8B7F9A792627EDB600A34C24 /* TermsAndConditionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsAndConditionsViewController.swift; sourceTree = "<group>"; };
-		8BDE3EDF26ABCFA300543EA5 /* HintProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HintProvider.swift; sourceTree = "<group>"; };
-		8BDE3EE026ABCFA300543EA5 /* Hint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hint.swift; sourceTree = "<group>"; };
-		8BDE3EE126ABCFA300543EA5 /* ScanViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanViewController.swift; sourceTree = "<group>"; };
-		8BDE3EE226ABCFA300543EA5 /* HeadScanner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeadScanner.swift; sourceTree = "<group>"; };
-		8BDE3EE326ABCFA300543EA5 /* HeadMeshDataExporter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeadMeshDataExporter.swift; sourceTree = "<group>"; };
-		8BDE3EF626ABD1C900543EA5 /* AutoresizingLayeredView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoresizingLayeredView.swift; sourceTree = "<group>"; };
-		8BDE3EF726ABD1C900543EA5 /* ViewerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewerViewController.swift; sourceTree = "<group>"; };
 		8BDE3F0F26ABD46A00543EA5 /* SampleApplication-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SampleApplication-Bridging-Header.h"; sourceTree = "<group>"; };
 		8BDE401426ABF2BC00543EA5 /* Bellus3D.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bellus3D.framework; path = Frameworks/arm64/Bellus3D.framework; sourceTree = "<group>"; };
 		8BDEB74C267711B400883A12 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
@@ -133,6 +139,8 @@
 		8BED3D5526852EED00D51139 /* video1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = video1.mp4; path = ../../../Downloads/video1.mp4; sourceTree = "<group>"; };
 		8BED3D5F268846B800D51139 /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
 		8BED3D6626884EDB00D51139 /* LogInFormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInFormViewModel.swift; sourceTree = "<group>"; };
+		8BFEA39B26BB907600585E36 /* FilesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilesViewController.swift; sourceTree = "<group>"; };
+		8BFEA39F26BB909D00585E36 /* FilesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilesManager.swift; sourceTree = "<group>"; };
 		8D258EEBF0AE809334FD9FCC /* Pods-VisiumTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VisiumTests.debug.xcconfig"; path = "Target Support Files/Pods-VisiumTests/Pods-VisiumTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A694FC428F956F3A59ED6FAF /* Pods-Visium.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Visium.debug.xcconfig"; path = "Target Support Files/Pods-Visium/Pods-Visium.debug.xcconfig"; sourceTree = "<group>"; };
 		CC00A03AE2C2EDA8021EF550 /* Pods-Visium.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Visium.release.xcconfig"; path = "Target Support Files/Pods-Visium/Pods-Visium.release.xcconfig"; sourceTree = "<group>"; };
@@ -181,6 +189,33 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		8B64748D26B2766B00466BEC /* Capturing */ = {
+			isa = PBXGroup;
+			children = (
+				8B64748E26B2766B00466BEC /* Hint */,
+				8B64749126B2766B00466BEC /* ScanViewController.swift */,
+				8B64749226B2766B00466BEC /* HeadScanner.swift */,
+				8B64749326B2766B00466BEC /* HeadMeshDataExporter.swift */,
+			);
+			path = Capturing;
+			sourceTree = "<group>";
+		};
+		8B64748E26B2766B00466BEC /* Hint */ = {
+			isa = PBXGroup;
+			children = (
+				8B64748F26B2766B00466BEC /* HintProvider.swift */,
+				8B64749026B2766B00466BEC /* Hint.swift */,
+			);
+			path = Hint;
+			sourceTree = "<group>";
+		};
+		8B6D373C26B7A259004D4273 /* ZipFiles */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ZipFiles;
+			sourceTree = "<group>";
+		};
 		8B7F99D12623FC7200A34C24 = {
 			isa = PBXGroup;
 			children = (
@@ -206,9 +241,12 @@
 		8B7F99DC2623FC7200A34C24 /* Visium */ = {
 			isa = PBXGroup;
 			children = (
-				8BDE3EDD26ABCFA300543EA5 /* Capturing */,
+				8B6D373C26B7A259004D4273 /* ZipFiles */,
+				8B64748D26B2766B00466BEC /* Capturing */,
 				8BED3D6526884E9C00D51139 /* View Model */,
 				8BED3D4D26852EB100D51139 /* video.mp4 */,
+				8B6D373D26B7A275004D4273 /* visiumscanAWS.zip */,
+				8B6D374426B89139004D4273 /* statusCircle.png */,
 				8B64744D26B109E400466BEC /* video2.mp4 */,
 				8BED3D5526852EED00D51139 /* video1.mp4 */,
 				8B7F9A252624059000A34C24 /* Extensions */,
@@ -253,6 +291,7 @@
 				8BDEB74C267711B400883A12 /* APIManager.swift */,
 				8BDEB75126771BFF00883A12 /* UrlConstants.swift */,
 				8BED3D5F268846B800D51139 /* SessionManager.swift */,
+				8BFEA39F26BB909D00585E36 /* FilesManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -260,6 +299,7 @@
 		8B7F9A172623FC8500A34C24 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				8B64745326B1284F00466BEC /* Views */,
 				8B7F9A6A2626B1A200A34C24 /* CheckBoxWithTitle */,
 				8B7F9A382624192100A34C24 /* VideoPlayer */,
 				8B7F9A3326240C0000A34C24 /* OnboardingCollectionViewCell.swift */,
@@ -278,8 +318,8 @@
 		8B7F9A1C2623FCBE00A34C24 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				8BDE3EF626ABD1C900543EA5 /* AutoresizingLayeredView.swift */,
-				8BDE3EF726ABD1C900543EA5 /* ViewerViewController.swift */,
+				8B64749E26B2768600466BEC /* AutoresizingLayeredView.swift */,
+				8B64749D26B2768600466BEC /* ViewerViewController.swift */,
 				8B7F9A20262402AB00A34C24 /* OnboardingViewController.swift */,
 				8B7F9A502625584C00A34C24 /* LogInViewController.swift */,
 				8B7F9A652626925F00A34C24 /* LogInFormViewController.swift */,
@@ -288,6 +328,7 @@
 				8B68CACD263398360041F839 /* CreateAccountTableViewController.swift */,
 				8B68CAD226339A150041F839 /* PasswordResetCodeViewController.swift */,
 				8B68CAD726339A930041F839 /* PasswordResetFormViewController.swift */,
+				8BFEA39B26BB907600585E36 /* FilesViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -316,27 +357,6 @@
 				8B7F9A732626B1DB00A34C24 /* CheckBoxWithTitleView.xib */,
 			);
 			path = CheckBoxWithTitle;
-			sourceTree = "<group>";
-		};
-		8BDE3EDD26ABCFA300543EA5 /* Capturing */ = {
-			isa = PBXGroup;
-			children = (
-				8B64745326B1284F00466BEC /* Views */,
-				8BDE3EDE26ABCFA300543EA5 /* Hint */,
-				8BDE3EE126ABCFA300543EA5 /* ScanViewController.swift */,
-				8BDE3EE226ABCFA300543EA5 /* HeadScanner.swift */,
-				8BDE3EE326ABCFA300543EA5 /* HeadMeshDataExporter.swift */,
-			);
-			path = Capturing;
-			sourceTree = "<group>";
-		};
-		8BDE3EDE26ABCFA300543EA5 /* Hint */ = {
-			isa = PBXGroup;
-			children = (
-				8BDE3EDF26ABCFA300543EA5 /* HintProvider.swift */,
-				8BDE3EE026ABCFA300543EA5 /* Hint.swift */,
-			);
-			path = Hint;
 			sourceTree = "<group>";
 		};
 		8BED3D6526884E9C00D51139 /* View Model */ = {
@@ -474,10 +494,12 @@
 				8BED3D5626852EED00D51139 /* video1.mp4 in Resources */,
 				8B64744E26B109E400466BEC /* video2.mp4 in Resources */,
 				8B7F99EA2623FC7300A34C24 /* LaunchScreen.storyboard in Resources */,
+				8B6D373E26B7A275004D4273 /* visiumscanAWS.zip in Resources */,
 				8BED3D4E26852EB100D51139 /* video.mp4 in Resources */,
 				8B7F9A742626B1DB00A34C24 /* CheckBoxWithTitleView.xib in Resources */,
 				8B7F99E72623FC7300A34C24 /* Assets.xcassets in Resources */,
 				8B7F99E52623FC7200A34C24 /* Main.storyboard in Resources */,
+				8B6D374526B89139004D4273 /* statusCircle.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -607,33 +629,35 @@
 			files = (
 				8B68CAD326339A150041F839 /* PasswordResetCodeViewController.swift in Sources */,
 				8B68CACE263398360041F839 /* CreateAccountTableViewController.swift in Sources */,
+				8B64749526B2766B00466BEC /* Hint.swift in Sources */,
+				8B64749426B2766B00466BEC /* HintProvider.swift in Sources */,
 				8B7F9A3A2624195B00A34C24 /* VideoPlayer.swift in Sources */,
 				8B7F9A6126268CE900A34C24 /* RoundedUITextField.swift in Sources */,
+				8B64749826B2766B00466BEC /* HeadMeshDataExporter.swift in Sources */,
 				8B7F9A2F26240B0900A34C24 /* OnboardingSlide.swift in Sources */,
 				8B7F99DE2623FC7200A34C24 /* AppDelegate.swift in Sources */,
-				8BDE3EE726ABCFA300543EA5 /* HeadScanner.swift in Sources */,
-				8BDE3EE826ABCFA300543EA5 /* HeadMeshDataExporter.swift in Sources */,
-				8BDE3EE526ABCFA300543EA5 /* Hint.swift in Sources */,
+				8B64749726B2766B00466BEC /* HeadScanner.swift in Sources */,
 				8B7F9A662626925F00A34C24 /* LogInFormViewController.swift in Sources */,
 				8B7F9A21262402AB00A34C24 /* OnboardingViewController.swift in Sources */,
 				8B7F9A512625584C00A34C24 /* LogInViewController.swift in Sources */,
-				8BDE3EE426ABCFA300543EA5 /* HintProvider.swift in Sources */,
 				8BED3D6726884EDB00D51139 /* LogInFormViewModel.swift in Sources */,
+				8BFEA3A026BB909D00585E36 /* FilesManager.swift in Sources */,
 				8BDEB75226771BFF00883A12 /* UrlConstants.swift in Sources */,
-				8BDE3EF826ABD1C900543EA5 /* AutoresizingLayeredView.swift in Sources */,
 				8B7F9A7A2627EDB600A34C24 /* TermsAndConditionsViewController.swift in Sources */,
 				8B7F99E02623FC7200A34C24 /* SceneDelegate.swift in Sources */,
 				8B7F9A27262405A100A34C24 /* Extensions.swift in Sources */,
 				8BDEB74D267711B400883A12 /* APIManager.swift in Sources */,
 				8B7F9A3426240C0000A34C24 /* OnboardingCollectionViewCell.swift in Sources */,
+				8B6474A026B2768600466BEC /* AutoresizingLayeredView.swift in Sources */,
 				8B68CAD826339A930041F839 /* PasswordResetFormViewController.swift in Sources */,
-				8BDE3EF926ABD1C900543EA5 /* ViewerViewController.swift in Sources */,
 				8B64745926B1297600466BEC /* Alert.swift in Sources */,
+				8B64749F26B2768600466BEC /* ViewerViewController.swift in Sources */,
 				8B7F9A6C2626B1CC00A34C24 /* CheckBoxWithTitleView.swift in Sources */,
 				8B7F9A572625EECF00A34C24 /* RoundedUIButton.swift in Sources */,
 				8BED3D60268846B800D51139 /* SessionManager.swift in Sources */,
 				8B6114FD2629609900B833C6 /* ResetPasswordViewController.swift in Sources */,
-				8BDE3EE626ABCFA300543EA5 /* ScanViewController.swift in Sources */,
+				8BFEA39C26BB907600585E36 /* FilesViewController.swift in Sources */,
+				8B64749626B2766B00466BEC /* ScanViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

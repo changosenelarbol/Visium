@@ -17,6 +17,9 @@ class TermsAndConditionsViewController: UIViewController {
     
     @IBAction func EULAAction(_ sender: Any) {
         Alert.shared.showAlert(title: "Succes!!", alertType: .warning)
+        Alert.shared.didPressOk = {
+            print("xxx")
+        }
     }
     
     /*

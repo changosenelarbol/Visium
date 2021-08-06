@@ -16,6 +16,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         B3DLogger.shared.writer = self
+//        if let lastFiles = FilesManager.lastFileURL {
+//        FilesManager.filesUrls.append(lastFiles)
+//        print(FilesManager.filesUrls)
+//        }
+        
+        
+        
+        
+//        if let urlOfFiles = URL(string: "file:///var/mobile/Containers/Data/Application/38E9D691-4638-4747-9E83-65D9226B7672/Documents/Output-files/1628139909.7949982/") {
+//
+//        FilesManager.lastFileURL = urlOfFiles
+//            print(FilesManager.lastFileURL)
+//            FilesManager.filesUrls.append(urlOfFiles)
+//            print(FilesManager.filesUrls)
+//        }
 
         return true
     }

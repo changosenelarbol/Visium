@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class LogInFormViewController: UIViewController {
     
@@ -39,10 +40,47 @@ class LogInFormViewController: UIViewController {
         ApiManager.logIn(user: userInfo.email, password: userInfo.password) { (token) in
             print(token)
             SessionManager.shared.token = token
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let scannViewController = storyboard.instantiateViewController(identifier: "ScanViewController")
-            scannViewController.modalPresentationStyle = .fullScreen
-            self.navigationController?.pushViewController(scannViewController, animated: true)
+          
+            
+            
+            ApiManager.getUrlToUploadFile(token: token, descriptin: "description") { (url) in
+                print(url)
+                SessionManager.shared.urlToUpload = url
+                
+                
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                let scannViewController = storyboard.instantiateViewController(identifier: "ScanViewController")
+                scannViewController.modalPresentationStyle = .fullScreen
+                self.navigationController?.pushViewController(scannViewController, animated: true)
+                
+               
+
+//                if let zipFilePath = Bundle.main.path(forResource: "visiumscanAWS", ofType: "zip") {
+//                    print(zipFilePath)
+//                     let fileUrl = URL(fileURLWithPath: zipFilePath)
+//                    guard let urlToUpload = SessionManager.shared.urlToUpload else { return }
+//
+//                    guard  let serverUrl: URL = URL(string: urlToUpload) else { return }
+//
+//
+//
+//
+//                    ApiManager.uploadFile(fileUrl: fileUrl, serverUrl: serverUrl) { (message) in
+//                        print(message)
+//                    } failure: {
+//                        print("error uploading zip")
+//                    }
+//
+//
+//
+//                }
+                
+            } failure: {
+                print("failure")
+            }
+
+            
+            
         } failure: {
             print("failure")
         }
