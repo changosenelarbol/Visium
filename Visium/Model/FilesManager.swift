@@ -12,11 +12,11 @@ class FilesManager {
     static var lastFileURL : URL? {
         get {
             let file =  UserDefaults.standard.url(forKey: "lastFileURL")
-            print(file)
+           // print(file)
             return file
         }
         set {
-            print(newValue)
+           // print(newValue)
             UserDefaults.standard.set(newValue, forKey: "lastFileURL")
         }
     }
@@ -38,42 +38,67 @@ class FilesManager {
         }
     }
     
-    func zipFile() {
-        let fm = FileManager.default
-        let baseDirectoryUrl = fm.urls(for: .documentDirectory, in: .userDomainMask).first!
-        // populate the app's documents directory with some example files
-        // this will hold the URL of the zip file
-        var archiveUrl: URL?
-        // if we encounter an error, store it here
-        var error: NSError?
-
-        let coordinator = NSFileCoordinator()
-        // zip up the documents directory
-        // this method is synchronous and the block will be executed before it returns
-        // if the method fails, the block will not be executed though
-        // if you expect the archiving process to take long, execute it on another queue
-        coordinator.coordinate(readingItemAt: baseDirectoryUrl, options: [.forUploading], error: &error) { (zipUrl) in
-            // zipUrl points to the zip file created by the coordinator
-            // zipUrl is valid only until the end of this block, so we move the file to a temporary folder
-            let tmpUrl = try! fm.url(
-                for: .itemReplacementDirectory,
-                in: .userDomainMask,
-                appropriateFor: zipUrl,
-                create: true
-            ).appendingPathComponent("archive.zip")
-            try! fm.moveItem(at: zipUrl, to: tmpUrl)
-
-            // store the URL so we can use it outside the block
-            archiveUrl = tmpUrl
+    static var zipFilesUrls : [URL] {
+        get {
+            let strings =  UserDefaults.standard.array(forKey: "zipFilesUrls") as? [String] ?? []
+            let urls = strings.map { (url) -> URL in
+                return URL(fileURLWithPath: url)
+            }
+            return urls
         }
-
-        if let archiveUrl = archiveUrl {
-            // bring up the share sheet so we can send the archive with AirDrop for example
-//            let avc = UIActivityViewController(activityItems: [archiveUrl], applicationActivities: nil)
-//            present(avc, animated: true)
-        } else {
-            print(error)
+        set {
+            
+            let arrayOfString: [String] = newValue.map { (url) -> String in
+               return url.description
+            }
+            UserDefaults.standard.set(arrayOfString, forKey: "zipFilesUrls")
         }
     }
     
+    static func zipFile(source: URL, name: String) -> URL? {
+        
+      
+    let fm = FileManager.default
+  //  let baseDirectoryUrl = fm.urls(for: .documentDirectory, in: .userDomainMask).first!
+  
+    let baseDirectoryUrl = source
+
+        // populate the app's documents directory with some example files
+    print(baseDirectoryUrl)
+//    for i in 1...10 {
+//        let fileUrl = baseDirectoryUrl.appendingPathComponent("\(i).txt")
+//        let str = "\(i)"
+//        try! str.write(to: fileUrl, atomically: true, encoding: .utf8)
+//    }
+
+    // this will hold the URL of the zip file
+    var archiveUrl: URL?
+    // if we encounter an error, store it here
+    var error: NSError?
+
+    let coordinator = NSFileCoordinator()
+    // zip up the documents directory
+    // this method is synchronous and the block will be executed before it returns
+    // if the method fails, the block will not be executed though
+    // if you expect the archiving process to take long, execute it on another queue
+    coordinator.coordinate(readingItemAt: baseDirectoryUrl, options: [.forUploading], error: &error) { (zipUrl) in
+        // zipUrl points to the zip file created by the coordinator
+        // zipUrl is valid only until the end of this block, so we move the file to a temporary folder
+        let tmpUrl = try! fm.url(
+            for: .itemReplacementDirectory,
+            in: .userDomainMask,
+            appropriateFor: zipUrl,
+            create: true
+        ).appendingPathComponent("archive.zip")
+        try! fm.moveItem(at: zipUrl, to: tmpUrl)
+
+        // store the URL so we can use it outside the block
+        archiveUrl = tmpUrl
+       
+    }
+
+    
+       return archiveUrl
+   
+   }
 }

@@ -810,11 +810,12 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Bji-OR-9zK">
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="KbL-1C-9bP"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Bji-OR-9zK" firstAttribute="top" secondItem="KbL-1C-9bP" secondAttribute="top" id="6xJ-fS-GWh"/>
                             <constraint firstItem="Bji-OR-9zK" firstAttribute="leading" secondItem="KbL-1C-9bP" secondAttribute="leading" id="9hn-xX-vOA"/>
@@ -923,35 +924,38 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J8S-k5-cf1">
-                                <rect key="frame" x="333" y="44" width="81" height="71.5"/>
+                                <rect key="frame" x="333" y="44" width="81" height="63.5"/>
                                 <subviews>
-                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vPi-mU-W89">
-                                        <rect key="frame" x="16" y="32.5" width="51" height="31"/>
-                                    </switch>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Export" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P33-x3-wBs">
-                                        <rect key="frame" x="15.5" y="8" width="50.5" height="20.5"/>
+                                        <rect key="frame" x="16.5" y="8" width="50.5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vPi-mU-W89">
+                                        <rect key="frame" x="17" y="42" width="51" height="31"/>
+                                    </switch>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="vPi-mU-W89" secondAttribute="bottom" constant="8" id="NRj-cU-Hrd"/>
+                                    <constraint firstAttribute="bottom" secondItem="vPi-mU-W89" secondAttribute="bottom" constant="-9.5" id="NRj-cU-Hrd"/>
                                     <constraint firstItem="vPi-mU-W89" firstAttribute="centerX" secondItem="P33-x3-wBs" secondAttribute="centerX" id="ViZ-u1-i2U"/>
-                                    <constraint firstItem="vPi-mU-W89" firstAttribute="top" secondItem="P33-x3-wBs" secondAttribute="bottom" constant="4" id="fUw-62-wtW"/>
+                                    <constraint firstItem="vPi-mU-W89" firstAttribute="top" secondItem="P33-x3-wBs" secondAttribute="bottom" constant="13.5" id="fUw-62-wtW"/>
                                     <constraint firstItem="P33-x3-wBs" firstAttribute="top" secondItem="J8S-k5-cf1" secondAttribute="top" constant="8" id="m8d-Ig-ydK"/>
-                                    <constraint firstAttribute="trailing" secondItem="vPi-mU-W89" secondAttribute="trailing" constant="16" id="rZX-sW-FK8"/>
-                                    <constraint firstItem="vPi-mU-W89" firstAttribute="leading" secondItem="J8S-k5-cf1" secondAttribute="leading" constant="16" id="sYX-ND-3fv"/>
+                                    <constraint firstAttribute="trailing" secondItem="vPi-mU-W89" secondAttribute="trailing" constant="15" id="rZX-sW-FK8"/>
+                                    <constraint firstItem="vPi-mU-W89" firstAttribute="leading" secondItem="J8S-k5-cf1" secondAttribute="leading" constant="17" id="sYX-ND-3fv"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="64g-oV-QB8">
-                                <rect key="frame" x="20" y="78" width="59" height="37"/>
+                                <rect key="frame" x="13" y="84" width="59" height="37"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="37" id="Ihb-bH-lKo"/>
                                     <constraint firstAttribute="width" constant="59" id="l03-49-p2k"/>
                                 </constraints>
-                                <state key="normal" title="files"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" title="Files">
+                                    <color key="titleColor" systemColor="systemYellowColor"/>
+                                </state>
                                 <connections>
                                     <action selector="showFilesAction:" destination="tUo-1j-uWy" eventType="touchUpInside" id="Ru2-JR-06u"/>
                                 </connections>
@@ -967,14 +971,14 @@
                             <constraint firstItem="kBC-eb-2cM" firstAttribute="top" secondItem="9ag-X4-ae7" secondAttribute="bottom" constant="16" id="AXJ-v4-Kwl"/>
                             <constraint firstItem="9ag-X4-ae7" firstAttribute="top" secondItem="Tl0-lK-o8J" secondAttribute="bottom" constant="8" id="N35-3M-Qe5"/>
                             <constraint firstItem="J8S-k5-cf1" firstAttribute="top" secondItem="uWN-n8-Gf9" secondAttribute="top" id="Oo9-Xj-9uq"/>
-                            <constraint firstItem="64g-oV-QB8" firstAttribute="leading" secondItem="Ddj-26-g97" secondAttribute="leading" constant="20" id="RHO-ia-7Oc"/>
+                            <constraint firstItem="64g-oV-QB8" firstAttribute="leading" secondItem="Ddj-26-g97" secondAttribute="leading" constant="13" id="RHO-ia-7Oc"/>
                             <constraint firstItem="Tl0-lK-o8J" firstAttribute="top" secondItem="uWN-n8-Gf9" secondAttribute="bottom" constant="20" id="WP5-ao-EBU"/>
                             <constraint firstItem="Ddj-26-g97" firstAttribute="trailing" secondItem="uWN-n8-Gf9" secondAttribute="trailing" constant="20" id="Wwo-y2-ngT"/>
                             <constraint firstItem="Ddj-26-g97" firstAttribute="trailing" secondItem="kBC-eb-2cM" secondAttribute="trailing" constant="16" id="aaG-gf-2h8"/>
                             <constraint firstItem="Tl0-lK-o8J" firstAttribute="leading" secondItem="Ddj-26-g97" secondAttribute="leading" constant="16" id="hD2-Bn-9J2"/>
                             <constraint firstItem="kBC-eb-2cM" firstAttribute="leading" secondItem="Ddj-26-g97" secondAttribute="leading" constant="16" id="oiB-XH-KeM"/>
                             <constraint firstItem="uWN-n8-Gf9" firstAttribute="top" secondItem="Ddj-26-g97" secondAttribute="top" id="qoH-HR-o8A"/>
-                            <constraint firstItem="9ag-X4-ae7" firstAttribute="top" secondItem="64g-oV-QB8" secondAttribute="bottom" constant="7.5" id="sue-Tj-5dC"/>
+                            <constraint firstItem="64g-oV-QB8" firstAttribute="centerY" secondItem="Tl0-lK-o8J" secondAttribute="centerY" id="wL6-40-JlC"/>
                             <constraint firstAttribute="trailing" secondItem="J8S-k5-cf1" secondAttribute="trailing" id="x3z-JM-g2z"/>
                             <constraint firstItem="9ag-X4-ae7" firstAttribute="leading" secondItem="o8y-Kf-qJ3" secondAttribute="leading" id="zxx-5n-F32"/>
                         </constraints>
@@ -1013,7 +1017,7 @@
                                     <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KuO-9g-lkr">
                                         <rect key="frame" x="133.5" y="0.0" width="47" height="60"/>
                                         <state key="normal" title="Share">
-                                            <color key="titleColor" systemColor="systemPinkColor"/>
+                                            <color key="titleColor" systemColor="systemOrangeColor"/>
                                         </state>
                                         <connections>
                                             <action selector="shareButtonTapped:" destination="jSQ-e4-tg3" eventType="touchUpInside" id="BtY-s1-03u"/>
@@ -1188,11 +1192,14 @@
         <systemColor name="systemIndigoColor">
             <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
-        <systemColor name="systemPinkColor">
-            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemPurpleColor">
             <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
